@@ -20,7 +20,7 @@
 - [Compute options (EC2, Containers, Serverless)](https://aws.amazon.com/products/compute/)
 - [Intro to EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
 - [EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/)
-- Start EC2 instance and install a webserver:
+- Start EC2 instance and install a web-server (user data section):
 	- Save Private Key
 
 ```
@@ -34,19 +34,26 @@ echo "Hello World from $(hostname -f)" > /var/www/html/index.html
 ```
 
 - Configure ALB and target group inkl. health check to /index.html
-- Deploy second instance
-
 
 ### Session 2 - Introduction to AWS (60min)
 #### EC2, Auto-Scaling, Load Balancing
-- Create an EC2 launch template (explain User Data section)
+- Create an EC2 launch template
 - Create an Auto Scaling Group + ALB + Target Group via the ASG dialog
 - Do tests on shutting down instances
+- Check CloudWatch
 
 #### S3 static website hosting
 - [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.html)
+- Create a simple index.html via Cloudshell and copy to the target bucket
 
-Bucket Policy:
+```
+echo "Hello AWS Enablement Day" > index.html
+aws s3 cp index.html s3://<yourbucketname>
+```
+- Enable static website hosting
+- Configure and modify S3 Bucket Policy
+
+S3 Bucket Policy:
 ```
 {
 	"Version": "2012-10-17",
