@@ -69,6 +69,8 @@ S3 Bucket Policy:
 }
 ```
 
+- optional: Add a Content Delivery Network (CDN - Amazon CloudFront)
+
 ### Session 3 - Serverless translation service (60min)
 
 #### Sources
