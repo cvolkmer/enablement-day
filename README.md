@@ -1,6 +1,6 @@
 ## Hands-On Sessions
 
-### Session 1 - Introduction to AWS (60-70min)
+### Session 1 - Introduction to AWS
 #### AWS Console
 - How to Access AWS Environments (AWS Console, API, SDK)
 - Navigating the AWS Console
@@ -35,7 +35,7 @@ echo "Hello World from $(hostname -f)" > /var/www/html/index.html
 
 - Configure ALB and target group inkl. health check to /index.html
 
-### Session 2 - Introduction to AWS (60min)
+### Session 2 - Introduction to AWS
 #### EC2, Auto-Scaling, Load Balancing
 - Create an EC2 launch template
 - Create an Auto Scaling Group + ALB + Target Group via the ASG dialog
@@ -71,10 +71,8 @@ S3 Bucket Policy:
 
 - optional: Add a Content Delivery Network (CDN - Amazon CloudFront)
 
-### Session 3 - Serverless translation service (60min)
+### Session 3 - Serverless translation service
 
 #### Sources
 [GitHub Repository](https://github.com/cvolkmer/translate-example-s3)
 
-#### Access to AWS Environment
-https://dashboard.eventengine.run
